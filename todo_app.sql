@@ -23,10 +23,10 @@ ALTER TABLE tasks ADD COLUMN completed_at timestamp without time zone DEFAULT NU
 
 ALTER TABLE tasks ALTER COLUMN updated_at timestamp without time zone NOT NULL DEFAULT NOW();
 
-INSERT INTO tasks (title, description, created_at, updated_at, completed) VALUES('Study SQL', 'Complete this exercise', now(), now(), NULL);
+INSERT INTO tasks (title, description, created_at, updated_at, completed_at) VALUES('Study SQL', 'Complete this exercise', now(), now(), NULL);
 
 INSERT INTO tasks (title, description) VALUES('Study PostgreSQL', 'Read all the documentation');
-t
+
 SELECT title
 FROM tasks
 WHERE completed_at = NULL;
